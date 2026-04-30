@@ -4,11 +4,12 @@
   {
     public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
-    public decimal CurrentPrice { get; set; }
+    public decimal SellingPrice { get; set; }
+    public decimal PurchasingPrice { get; set; }
     public int MinimumStockLevel { get; set; }
 
     public int CategoryId { get; set; }
-    public Category Category { get; set; } = null;
+    public Category Category { get; set; } = null!;
 
     public ICollection<StockMovementDetail> StockMovementDetails { get; set; } = new List<StockMovementDetail>();
   }

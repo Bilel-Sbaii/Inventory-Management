@@ -1,6 +1,5 @@
 using Inventory_Management.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 

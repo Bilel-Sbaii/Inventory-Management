@@ -44,14 +44,17 @@ namespace Inventory_Management.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("CurrentPrice")
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("MinimumStockLevel")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("PurchasingPrice")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("SellingPrice")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -92,9 +95,6 @@ namespace Inventory_Management.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("PriceAtMovement")
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("ProductId")
                         .HasColumnType("INTEGER");
 
@@ -103,6 +103,9 @@ namespace Inventory_Management.Migrations
 
                     b.Property<int>("StockMovementId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

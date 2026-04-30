@@ -45,7 +45,8 @@ namespace Inventory_Management.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
-                    CurrentPrice = table.Column<decimal>(type: "TEXT", nullable: false),
+                    SellingPrice = table.Column<decimal>(type: "TEXT", nullable: false),
+                    PurchasingPrice = table.Column<decimal>(type: "TEXT", nullable: false),
                     MinimumStockLevel = table.Column<int>(type: "INTEGER", nullable: false),
                     CategoryId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
@@ -90,7 +91,7 @@ namespace Inventory_Management.Migrations
                     StockMovementId = table.Column<int>(type: "INTEGER", nullable: false),
                     ProductId = table.Column<int>(type: "INTEGER", nullable: false),
                     Quantity = table.Column<int>(type: "INTEGER", nullable: false),
-                    PriceAtMovement = table.Column<decimal>(type: "TEXT", nullable: false)
+                    UnitPrice = table.Column<decimal>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
