@@ -485,3 +485,7 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+/Inventory.db-shm
+/Inventory.db-wal
+/Inventory.db
+/Inventory.db

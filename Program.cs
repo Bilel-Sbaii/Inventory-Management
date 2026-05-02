@@ -1,4 +1,6 @@
 using Inventory_Management.Data;
+using Inventory_Management.Services.Implementations;
+using Inventory_Management.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<InventoryManagementDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 
