@@ -31,12 +31,6 @@ namespace Inventory_Management.DTOs
     public decimal UnitPrice { get; set; }
   }
 
-  public class AddStockMovementTransactionResponse
-  {
-    public int StockMovementId { get; set; }
-    public MovementType Type { get; set; }
-  }
-
   public enum AddStockMovementResult
   {
     InvalidProduct = 0,
